@@ -1,9 +1,9 @@
 <?php 
 $archivenav = createArchiveNav();
 
-$postID = $_GET['postID'];
-$monthID = $_GET['monthID'];
-$yearID = $_GET['yearID'];
+$postID = filter_input(INPUT_GET, 'postID', FILTER_SANITIZE_NUMBER_INT);
+$monthID = filter_input(INPUT_GET, 'monthID', FILTER_SANITIZE_NUMBER_INT);
+$yearID = filter_input(INPUT_GET, 'yearID', FILTER_SANITIZE_NUMBER_INT);
 
 if (isset($postID)){
     $postitems = getBlogPostsID($postID);
@@ -14,19 +14,15 @@ if (isset($postID)){
 } else {
     $postitems = getBlogPostsAll();
 }
-$content = createBlogContent($page, $postitems);
-
+$content = createBlogContent($postitems);
 ?>
 
-<div id="content">
-    <div id="postcontent">
-        <p>Blog page</p>
-        <?php echo $content; ?>
-    </div>
+<div id="blogIndex" class="content">
     <div id="archivenav">
+        <h2>Archives</h2>
         <ul><?php echo $archivenav; ?></ul>
     </div>
-    <ul>
-        <?php echo $contentnav; ?>
-    </ul>
+    <div id="postcontent">
+        <?php echo $content; ?>
+    </div>
 </div>

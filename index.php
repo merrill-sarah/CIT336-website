@@ -6,7 +6,6 @@ session_start();
 require "models/db.php";
 require "models/navigation.php";
 require "models/blogposts.php";
-require "models/validate-input.php";
 
 /*include views*/
 include "views/header.php";
@@ -17,12 +16,10 @@ $action = strtolower(filter_input(INPUT_GET, 'action', FILTER_SANITIZE_STRING));
 /*use switch statements to determine which page to load based on action*/
 switch ($action) {
     case "blog":
-        $page = 0;
         include "views/blog-index.php";
         break;
     
     case "viewPost":
-        $page = 0;
         include 'views/blog-index.php';
         break;
     
@@ -46,7 +43,6 @@ switch ($action) {
         break;
     
     default:
-        $page = 0;
         include "views/blog-index.php";
 }
 

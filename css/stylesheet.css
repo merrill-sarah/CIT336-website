@@ -1,10 +1,665 @@
-/*
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
-*/
-/* 
-    Created on : Apr 1, 2015, 8:45:17 PM
-    Author     : Sarawr
-*/
+body {
+    margin:0px;
+    padding:0px;
+    background-color:#f2eae4;
+    font-family: Georgia, serif;
+    font-size: 14px;
+    color: #1a1613;
+    height: 100%;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: Calibri, Arial, sans-serif;
+    padding:0px;
+    margin:0px;
+    color:#e49898;
+}
+h1 {
+    font-size: 24px;
+}
+a {
+    color: #983d48;
+}
+button {
+    text-decoration: none;
+    background-color: #e49898;
+    color:#ffffff;
+    border: none;
+    font-family: Calibri, Arial, sans-serif;
+    font-size:14px;
+    padding:3px 5px;  
+}
+button:hover {
+    background-color: #983d48;
+}
+.error {
+    margin:10px 50px;
+    color:red;
+}
 
+
+header {
+    background-image: url("/files/layout/header-img.png");
+    background-repeat: no-repeat;
+    height:250px;
+    width:800px;
+    margin-left:auto;
+    margin-right:auto;
+    padding:0px;
+}
+header img {
+    width:335px;
+    margin-left:232px;
+    margin-top:135px;
+}
+header h2 {
+    font-family: Georgia, serif;
+    font-size: 11px;
+    margin-left:260px;
+    color: #1a1613;
+    font-weight: normal;
+}
+
+/*---------------------Navigation------------------*/
+/*-------------------------------------------------*/
+nav {
+    width:800px;
+    background-color: #caaf9b;
+    font-family: Calibri, Arial, sans-serif;
+    margin-top:35px;
+    height:30px;
+    font-size:18px;
+}
+nav table {
+    margin: 0px auto;
+}
+nav tr {
+  
+    padding:0px;
+    height: 35px;
+}
+nav a {
+    display:block;
+    padding-top:3px;
+    height:32px;
+    width:75px;
+    margin-top:-10px;
+    text-decoration: none;
+    color:#ffffff;
+    text-align: center;
+}
+nav a:hover {
+    transition: background-color .3s, color .3s;
+    background-color:#ffffff;
+    color: #e49898;
+}
+
+
+/*-----------------Content-------------------*/
+/*--------------------------------------------*/
+.content {
+    background-color:#ffffff;
+    width:800px;
+    margin-left:auto;
+    margin-right:auto;
+    padding:0px;
+    clear:both;
+    overflow:auto;
+}
+
+/*---------------Blog Index Page-------------------*/
+/*-------------------------------------------------*/
+#postcontent {
+    float:right;
+    width:430px;
+    padding:30px 40px 30px 30px;
+}
+#postcontent h2 {
+    font-size:11px;
+}
+#archivenav h2 {
+    font-weight: normal;
+}
+#archivenav {
+    float:right;
+    width: 250px;
+    padding: 30px 20px 30px 0px;
+}
+#archivenav li {
+    list-style-type: none;
+}
+#archivenav li li{
+    margin-left:-20px;
+}
+#archivenav li li li {
+    margin-left:-15px;
+}
+#archivenav a {
+    color:#e49898;
+    text-decoration: none;
+}
+#archivenav a:hover {
+    text-decoration: underline;
+}
+.blogpost {
+    margin-bottom:40px;
+}
+
+/*----------------------About Page---------------------*/
+/*-----------------------------------------------------*/
+#about div {
+    width: 530px;
+    margin:auto;
+    padding-top:20px;
+    padding-bottom: 30px;
+}
+#about #images {
+    width:605px;
+    overflow:auto;
+    margin-bottom: 30px;
+}
+#images img {
+    float:left;
+}
+
+/*--------------------Log In---------------------------*/
+/*------------------------------------------------------*/
+#loginregister form {
+    margin: 30px 50px;
+}
+#loginregister li{
+    list-style-type: none;
+    margin:1px;
+}
+#loginregister label{
+    display:inline-block;
+    width:120px;
+}
+#loginform label {
+    width:80px;
+}
+#loginregister button {
+    margin-top:5px;
+    margin-left:5px;
+}
+
+/*--------------------Admin actions-------------------------*/
+/*-----------------------------------------------------------*/
+#account, #managePosts, #editUsers, #newPost {
+    margin:30px 50px;
+}
+
+#newPost textarea {
+    width:600px;
+    height:400px;
+}
+#newPost ul {
+    list-style-type: none;
+}
+#newPost input {
+    width:250px;
+}
+#managePosts td {
+    padding: 5px;
+}
+#managePosts th {
+    text-align: center;
+}
+#editUsers td {
+    padding: 5px;
+}
+#editUsers th {
+    text-align: center;
+}
+
+
+
+/*-----------------------footer----------------------*/
+/*----------------------------------------------------*/
+footer{
+    clear:both;
+    width:800px;
+    margin: 0px auto;
+}
+
+#footertop {
+    height: 30px;
+    background-color: #caaf9b;
+    margin:0px;
+    padding:1px;
+}
+#footertop ul {
+    list-style-type: none;
+    padding:0px;
+    width: 400px;
+    margin: 0px auto;
+}
+#footertop li {
+    display:inline-block;
+    height:15px;
+    width:125px;
+    text-align: center;
+}
+#footertop a {
+    color:#ffffff;
+    text-decoration:none;
+    font-size:11px;
+}
+#footertop a:hover {
+    text-decoration:underline;
+}
+
+#footerbot {
+    height:75px;
+    background-color:#302822;
+    margin:0px;
+    padding:1px;
+}
+#footerbot ul {
+    width:200px;
+    margin: 5px auto;
+    list-style-type: none;
+    padding:0px;
+}
+#footerbot a {
+    display:inline-block;
+    height:50px;
+    width:50px;
+    padding:0px;
+    margin:8px;
+    float:left;
+}
+#emailbutt {
+    background-image: url("/files/layout/email-icon-white.png");
+    background-repeat: no-repeat;
+}
+#emailbutt:hover {
+    background-image: url("/files/layout/email-icon-pink.png");
+}
+#fbbutt {
+    background-image: url("/files/layout/fb-icon-white.png");
+    background-repeat: no-repeat;
+}
+#fbbutt:hover {
+    background-image: url("/files/layout/fb-icon-pink.png");
+}
+#instabutt {
+    background-image: url("/files/layout/insta-icon-white.png");
+    background-repeat: no-repeat;
+}
+#instabutt:hover {
+    background-image: url("/files/layout/insta-icon-pink.png");
+}
+
+
+/*------------------------Site Plan------------------------------*/
+/*---------------------------------------------------------------*/
+#siteplan section{
+    margin:40px 60px;
+}
+#siteplan h1 {
+    margin:20px;
+}
+.colorgroup {
+    margin:10px;
+    float:left;
+}
+.swatches {
+    height:150px;
+    width:150px;
+}
+#swatch1 {
+    background-color: #f2eae4
+}
+#swatch2 {
+    background-color: #caaf9b
+}
+#swatch3 {
+    background-color: #302822
+}
+#swatch4 {
+    background-color: #e49898
+}
+.clear {
+    clear:both;
+}
+
+#teachpres {
+    margin: 50px 70px;
+}
+
+@media screen and (min-width:320px) and (max-width: 800px) {
+    
+body {
+    margin:0px;
+    padding:0px;
+    background-color:#f2eae4;
+    font-family: Georgia, serif;
+    font-size: 14px;
+    color: #1a1613;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: Calibri, Arial, sans-serif;
+    padding:0px;
+    margin:0px;
+    color:#e49898;
+}
+h1 {
+    font-size: 20px;
+}
+a {
+    color: #983d48;
+}
+button {
+    text-decoration: none;
+    background-color: #e49898;
+    color:#ffffff;
+    border: none;
+    font-family: Calibri, Arial, sans-serif;
+    font-size:14px;
+    padding:3px 5px;  
+}
+button:hover {
+    background-color: #983d48;
+}
+.error {
+    margin:5%;
+    color:red;
+}
+
+
+header {
+    background-image: none;
+    height:100px;
+    width:100%;
+    padding:0px;
+}
+header img {
+    display:block;
+    width:320px;
+    margin-top:2px;
+    margin:auto;
+}
+header h2 {
+    font-family: Georgia, serif;
+    width:320px;
+    text-align: center;
+    font-size: 11px;
+    margin:auto;
+    color: #1a1613;
+    font-weight: normal;
+}
+
+/*---------------------Navigation------------------*/
+/*-------------------------------------------------*/
+nav {
+    width:100%;
+    background-color: #caaf9b;
+    font-family: Calibri, Arial, sans-serif;
+    margin-top:2px;
+    height:30px;
+    font-size:18px;
+}
+nav table {
+    margin: 0px auto;
+}
+nav tr {
+  
+    padding:0px;
+    height: 33px;
+}
+nav a {
+    display:block;
+    padding-top:3px;
+    height:32px;
+    width:75px;
+    margin-top:-10px;
+    text-decoration: none;
+    color:#ffffff;
+    text-align: center;
+}
+nav a:hover {
+    transition: background-color .3s, color .3s;
+    background-color:#ffffff;
+    color: #e49898;
+}
+
+
+/*-----------------Content-------------------*/
+/*--------------------------------------------*/
+.content {
+    background-color:#ffffff;
+    width:100%;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:-23px;
+    padding:0px;
+    clear:both;
+    overflow:auto;
+}
+
+/*---------------Blog Index Page-------------------*/
+/*-------------------------------------------------*/
+#postcontent {
+    float: none;
+    width:90%;
+    padding:0px;
+    margin:auto;
+}
+#postcontent h2 {
+    font-size:11px;
+}
+#archivenav h2 {
+    font-weight: normal;
+}
+#archivenav {
+    float:none;
+    width: 90%;
+    padding:0px;
+    margin:auto;
+    margin-bottom:5px;
+}
+#archivenav li {
+    list-style-type: none;
+}
+#archivenav li li{
+    margin-left:-20px;
+}
+#archivenav li li li {
+    margin-left:-15px;
+}
+#archivenav a {
+    color:#e49898;
+    text-decoration: none;
+}
+#archivenav a:hover {
+    text-decoration: underline;
+}
+.blogpost {
+    margin-bottom:40px;
+}
+
+/*----------------------About Page---------------------*/
+/*-----------------------------------------------------*/
+#about div {
+    width: 100%;
+    margin:auto;
+    padding-top:20px;
+    padding-bottom: 30px;
+}
+#about #images {
+    width:100%;
+    overflow:auto;
+    margin-bottom: 30px;
+}
+#images img {
+    float:left;
+}
+
+/*--------------------Log In---------------------------*/
+/*------------------------------------------------------*/
+#loginregister form {
+    margin: 30px 50px;
+}
+#loginregister li{
+    list-style-type: none;
+    margin:1px;
+}
+#loginregister label{
+    display:inline-block;
+    width:120px;
+}
+#loginform label {
+    width:80px;
+}
+#loginregister button {
+    margin-top:5px;
+    margin-left:5px;
+}
+
+/*--------------------Admin actions-------------------------*/
+/*-----------------------------------------------------------*/
+#account, #managePosts, #editUsers, #newPost {
+    margin:30px 50px;
+}
+
+#newPost textarea {
+    width:600px;
+    height:400px;
+}
+#newPost ul {
+    list-style-type: none;
+}
+#newPost input {
+    width:250px;
+}
+#managePosts td {
+    padding: 5px;
+}
+#managePosts th {
+    text-align: center;
+}
+#editUsers td {
+    padding: 5px;
+}
+#editUsers th {
+    text-align: center;
+}
+
+
+
+/*-----------------------footer----------------------*/
+/*----------------------------------------------------*/
+footer{
+    clear:both;
+    width:100%;
+    margin: 0px auto;
+}
+
+#footertop {
+    height: 30px;
+    background-color: #caaf9b;
+    margin:0px;
+    padding:1px;
+    margin-bottom:-5px;
+}
+#footertop ul {
+    list-style-type: none;
+    padding:0px;
+    width: 320px;
+    margin: 0px auto;
+}
+#footertop li {
+    display:inline-block;
+    height:15px;
+    width:80px;
+    text-align: center;
+}
+#footertop a {
+    color:#ffffff;
+    text-decoration:none;
+    font-size:11px;
+}
+#footertop a:hover {
+    text-decoration:underline;
+}
+
+#footerbot {
+    height:75px;
+    background-color:#302822;
+    margin:0px;
+    padding:0px;
+}
+#footerbot ul {
+    width:200px;
+    margin: 5px auto;
+    list-style-type: none;
+    padding:0px;
+}
+#footerbot a {
+    display:inline-block;
+    height:50px;
+    width:50px;
+    padding:0px;
+    margin:8px;
+    float:left;
+}
+#emailbutt {
+    background-image: url("/files/layout/email-icon-white.png");
+    background-repeat: no-repeat;
+}
+#emailbutt:hover {
+    background-image: url("/files/layout/email-icon-pink.png");
+}
+#fbbutt {
+    background-image: url("/files/layout/fb-icon-white.png");
+    background-repeat: no-repeat;
+}
+#fbbutt:hover {
+    background-image: url("/files/layout/fb-icon-pink.png");
+}
+#instabutt {
+    background-image: url("/files/layout/insta-icon-white.png");
+    background-repeat: no-repeat;
+}
+#instabutt:hover {
+    background-image: url("/files/layout/insta-icon-pink.png");
+}
+
+
+/*------------------------Site Plan------------------------------*/
+/*---------------------------------------------------------------*/
+#siteplan section{
+    margin:40px 60px;
+}
+#siteplan h1 {
+    margin:20px;
+}
+.colorgroup {
+    margin:10px;
+    float:left;
+}
+.swatches {
+    height:150px;
+    width:150px;
+}
+#swatch1 {
+    background-color: #f2eae4
+}
+#swatch2 {
+    background-color: #caaf9b
+}
+#swatch3 {
+    background-color: #302822
+}
+#swatch4 {
+    background-color: #e49898
+}
+.clear {
+    clear:both;
+}
+
+#teachpres {
+    margin: 50px 70px;
+}
+    
+}

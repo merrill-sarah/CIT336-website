@@ -1,11 +1,4 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<title>[Oh Hello Sarah] Style Guide</title>
-		<meta charset="UTF-8"/>
-            <link href="styleguide.css" type="text/css" rel="stylesheet" />
-	</head>
-	<body>
+<div id="siteplan" class="content">
 		<h1 class="styleguide">[Oh Hello Sarah] Style Guide</h1>
 		
 		
@@ -24,14 +17,14 @@
 		<section>
 			<h2 class="styleguide">Layout</h2>
 			<h3 class="styleguide">Sitemap</h3>
-			<img src="images/site-map.jpg" alt="Oh Hello Sarah Sitemap image"/>
+			<img src="/files/site-plan/site-map.jpg" alt="Oh Hello Sarah Sitemap image"/>
 			<h3 class="styleguide">Wireframes</h3>
-			<img src="images/wireframe-blog.jpg" alt="Oh Hello Sarah Wireframe 1 image"/>
-			<img src="images/wireframe-2.jpg" alt="Oh Hello Sarah Wireframe 2 image"/>
-                        <img src="images/wireframe-blog.jpg" alt="Oh Hello Sarah Wireframe mobile image"/>
+			<img src="/files/site-plan/wireframe.jpg" alt="Oh Hello Sarah Wireframe 1 image"/>
+			<img src="/files/site-plan/wireframe-2.jpg" alt="Oh Hello Sarah Wireframe 2 image"/>
+
 			<h3 class="styleguide">Photoshop Design</h3>
 			<!-- You have not created this file yet. When this is completed you will need to upload it to your website and update the following link. -->
-			<a href="page-layout.psd">Download the [Oh Hello Sarah] Photoshop design file</a>
+			<a href="/files/site-plan/page-layout.psd" title="Page Layout PSD Download">Download the [Oh Hello Sarah] Photoshop design file</a>
 		</section>
 		
 <!-- Branding Section -->		
@@ -40,7 +33,7 @@
 			<h2 class="styleguide">Branding</h2>
 			<h3 class="styleguide">Website Logo</h3>
                         <div id="logo">
-                            <img src="images/site-logo.jpg" alt="Oh Hello Sarah logo image"/>
+                            <img src="/files/site-plan/site-logo.jpg" alt="Oh Hello Sarah logo image"/>
                         </div>
 			<h3 class="styleguide">Color Palette</h3>
 			<p class="styleguide">I chose these colors because I wanted to give the site a
@@ -90,7 +83,7 @@
 			<p>Mod qui quunturiam idenderro ma et ex ex ex exerum faci repel molut evelign amenduciis moloreperum qui nullupt ustrumet, sequi a pre non net is dia comnimusant isque voleseque eatur simpori beruptae quam fugit eostios quasi nulpa quatur molorero quam eventio ma venis quideri atiaturione volupiscia sime denestis et hil magnatem aliquundella cusanihit fuga. Pienia dolo tem voluptassi volor as voluptae nulla sed maximincium sapelen tiatqui busapernatus aspis as aborioreic tet recta volessu ndelit hil is explame niminve ratur?
 Mus andebis si adipsamus ad moluptiae cum este verupid es sequam veri tem sequi re volum doluptatque veriorepudis et, tetum as porem et que sim natiis doluptatures et, sam rehent alicipis suntio conestio ipsandam que prem idi quiasped mod maximod iatium ex et quassimin nonempo reperisci te nonsedit ut auta volorisque paribus.</p>
                         <figure>
-				<img src="images/photos/twig001s.jpg" alt="Figure image" />
+                            <img src="/files/images/about-iris.jpg" alt="Figure image" />
 				<figcaption>This is the figcaption</figcaption>
 			</figure>
                 
@@ -108,14 +101,4 @@ Mus andebis si adipsamus ad moluptiae cum este verupid es sequam veri tem sequi 
 				<li><a href="http://www.moresleep.net/">More Sleep</a> This website is where I got the idea to have the opacity change when the user hovers over my image links.</li>
 			</ul>
 		</section> -->
-
-<footer>
-    <ul>
-        <li><a href="../../index.php" title="Site index">Website Home</a></li>
-        <li><a href="site-plan.php" title="Site Plan">Site Plan</a></li>
-    </ul>
-</footer>
-		
-	</body>
-</html>
-
+            </div>	

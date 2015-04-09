@@ -4,18 +4,15 @@ function getPrimaryNav(){
     $nav = array(
         'blog' => 'Blog',
         'about' => 'About',
-        'contact' => 'Contact'
     );
     
-    /*if (CheckSession())
-    {
+    if (sessionCheck()){
         $nav['account'] = 'Account';
         $nav['logout'] = 'Log Out';
+    } else {
+    $nav['login'] = 'Log In';
     }
-    else
-    {
-        $nav['login'] = 'Log In';
-    }*/
+    
     
     return $nav;
 }
@@ -159,11 +156,17 @@ function createArchiveNavPost ($monthval){
     }
 }
 
-/*not finished*/
+/*currently unused feature, will add later
 function createContentNav ($page){
     $contentnav = "";
-    if ($page != 0) {
-        $contentnav .= "<li><a href";
-        
+    if ($page != 0){
+        $backpage = $page - 1;
+        $action = "viewPost&amp;page=".$backpage;
+        $contentnav .="<a href='index.php?action=.$action.' title='Newer Posts'>Newer Posts</a>"; 
     }
-}
+    $nextpage = $page + 1;
+    $action = "viewPost&amp;page=".$nextpage;
+    $contentnav .="<a href='index.php?action=.$action.' title='Older Posts'>Older Posts</a>";
+    
+    return $contentnav;
+} */
